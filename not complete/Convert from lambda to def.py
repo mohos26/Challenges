@@ -7,8 +7,8 @@ def lambda_to_def(code):
     code = code.split('lambda', maxsplit=1)
     code = {
         'name': code[0].split('=', maxsplit=1)[0].strip(),
-        'parameters': code[1].split(':', maxsplit=1)[0].strip(),
-        'code': code[1].split(':', maxsplit=1)[1].strip()
+        'parameters': ''.join(code[1].split(':')[:-1]).strip(),
+        'code': code[1].split(':')[-1].strip()
     }
     return f'def {code["name"]}({code["parameters"]}):\n\treturn {code["code"]}'
 
