@@ -4,12 +4,12 @@
 
 
 def pascal_row(n):
-    lst = [[1]]
-    for i in range(1, n + 1):
-        lst.append([1] + [0] * (i - 1) + [1])
-        for j in range(1, i):
-            lst[i][j] = lst[i - 1][j - 1] + lst[i - 1][j]
-    return lst[n]
+	lst = [[1]]
+	for i in range(1, n + 1):
+		lst.append([1] + [0] * (i - 1) + [1])
+		for j in range(1, i):
+			lst[i][j] = lst[i - 1][j - 1] + lst[i - 1][j]
+	return lst[n]
 
 def pascal_row_remaster(n):
     """lst = [1]
@@ -36,16 +36,21 @@ def pascal_row_remaster(n):
 
     return row + row[::-1]
 
-def pascal_row_gpt(n):
-    if n == 0:
-        return [1]
+def pascal_row_new(n):
+	if n % 2:
+		return False
+	res = []
+	aid = None
+	aid2 = None
+	for i in range(n//2):
+		if aid == None:
+			res.append(1)
+			aid = n - 1
+		else:
+			res.append(aid)
+			aid += (n - 1) * i
+	return res
 
-    row = [1]
-    prev_value = 1
+for i in range(2, 17, 2):
+	print(*pascal_row_new(i))
 
-    for k in range(1, n + 1):
-        curr_value = (prev_value * (n - k + 1)) // k
-        row.append(curr_value)
-        prev_value = curr_value
-
-    return row
