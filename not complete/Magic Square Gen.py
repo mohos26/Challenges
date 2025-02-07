@@ -40,4 +40,4 @@ def idigin(lst):
 def idigin2(lst, n):
 	return lst[-n:] + lst[:-n]
 
-print(idigin2([1, 2, 3, 4], 3))
+print(idigin2([1, 2, 3, 4], 1))
