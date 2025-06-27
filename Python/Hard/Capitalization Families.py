@@ -1,18 +1,17 @@
 # https://edabit.com/challenge/rbeuWab36FAiLj65m
-# 27.11.2024
-# Very Hard
+# 13.06.2025
+# Very hard
 
 
-def grouping(lst):
-	res = dict()
-	for word in lst:
-		aid = 0
-		for letter in word:
-			if letter.isupper():
-				aid += 1
-		if aid in res.keys():
-			res[aid].append(word)
-			res[aid].sort(key=lambda x: x.lower())
-		else:
+def grouping(words):
+	res = {}
+	for word in words:
+		aid = sum(map(str.isupper, word))
+		if aid not in res.keys():
 			res.update({aid: [word]})
+		else:
+			res[aid].append(word)
+	# sorted alphabetically (ignoring case)
+	for key in res.keys():
+		res[key] = sorted(res[key], key=str.lower)
 	return res
