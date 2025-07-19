@@ -1,6 +1,6 @@
 # https://edabit.com/challenge/7QPHWACcDihT3AM6b
 # 04.11.2024
-# Meduim
+# Medium
 
 
 def can_find(bigrams, words):
