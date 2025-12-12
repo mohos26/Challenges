@@ -15,3 +15,19 @@ class Solution:
         diameter_right = self.diameterOfBinaryTree(root.right)
         return max(self.maxDepth(root.left) + self.maxDepth(root.right), diameter_left, diameter_right)
 
+
+class Solution_2:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        res = 0
+        def dfs(node):
+            nonlocal res
+            if not node:
+                return 0
+            left = dfs(node.left)
+            right = dfs(node.right)
+            res = max(res, left + right)
+            return max(left, right) + 1
+        dfs(root)
+        return res
+
+
