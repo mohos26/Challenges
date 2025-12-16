@@ -52,3 +52,13 @@ class Solution:
                     return False
         return self.isSameTree(root, aid)
 
+class Solution_2:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        def dfs(left, curr, right):
+            if not curr:
+                return True
+            if not left < curr.val < right:
+                return False
+            return dfs(left, curr.left, curr.val) and dfs(curr.val, curr.right, right)
+        return dfs(float("-inf"), root, float("+inf"))
+
