@@ -24,3 +24,18 @@ class Solution:
         dfs(root)
         return res[k-1]
 
+
+class Solution_2:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        res = []
+        def dfs(node):
+            if not node:
+                return
+            dfs(node.left)
+            if len(res) == k:
+                return
+            res.append(node.val)
+            dfs(node.right)
+        dfs(root)
+        return res[-1]
+
