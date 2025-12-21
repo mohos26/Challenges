@@ -2,7 +2,7 @@
 # 20.12.2025
 
 
-class Solution:
+class Solution: # Contest
     def minOperations(self, nums: List[int]) -> int:
         s = set(nums)
         C = Counter(nums)
