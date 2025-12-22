@@ -29,3 +29,21 @@ class Solution_2:
             return root
         return dfs(0, len(inorder))
 
+
+class Solution_3:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        i = 0
+        d = dict(zip(inorder, range(len(inorder))))
+        def dfs(start, stop):
+            if start >= stop:
+                return
+            nonlocal i
+            n = preorder[i]
+            idx = d[n]
+            i += 1
+            root = TreeNode(n)
+            root.left = dfs(start, idx)
+            root.right = dfs(idx+1, stop)
+            return root
+        return dfs(0, len(inorder))
+
