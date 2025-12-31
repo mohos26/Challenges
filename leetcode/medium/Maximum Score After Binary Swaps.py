@@ -17,3 +17,14 @@ class Solution:
                 heap_len -= 1
         return sum(heap)
 
+
+class Solution_2: # (optimaze)
+    def maximumScore(self, nums: List[int], s: str) -> int:
+        res = 0
+        heap = []
+        for a, b in zip(nums, s):
+            heapq.heappush(heap, -a)
+            if b == '1':
+                res -= heapq.heappop(heap)
+        return res
+
