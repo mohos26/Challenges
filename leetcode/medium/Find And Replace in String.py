@@ -14,7 +14,7 @@ class Solution:
         return s
 
 
-class Solution:
+class Solution_2:
     def findReplaceString(self, s: str, indices: List[int], sources: List[str], targets: List[str]) -> str:
         for index, source, target in sorted(zip(indices, sources, targets), reverse=True):
             if s.startswith(source, index):
