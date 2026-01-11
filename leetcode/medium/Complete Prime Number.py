@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/complete-prime-number/
-# 09.12.2025
+# 09.12.2026
 
 
 class Solution:

@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/group-anagrams/
-# 09.09.2025
+# 09.09.2026
 
 
 class Solution:
@@ -11,7 +11,7 @@ class Solution:
         return list(d.values())
 
 
-# 20.10.2025
+# 20.10.2026
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         d = defaultdict(list)

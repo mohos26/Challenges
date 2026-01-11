@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/non-overlapping-intervals
-# 21.12.2025
+# 21.12.2026
 
 
 class Solution:

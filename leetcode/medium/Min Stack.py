@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/min-stack/
-# 19.10.2025
+# 19.10.2026
 
 
 class MinStack:
@@ -19,7 +19,7 @@ class MinStack:
         return min(self.stack)
 
 
-# 20.10.2025
+# 20.10.2026
 class MinStack:
     def __init__(self):
         self.stack = []

@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/valid-parentheses
-# 23.07.2025
+# 23.07.2026
 
 
 class Solution:
@@ -21,7 +21,7 @@ class Solution:
         return not lst
 
 
-# 19.10.2025
+# 19.10.2026
 class Solution:
     d = {
         '(': ')',

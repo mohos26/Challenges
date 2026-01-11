@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/day-of-the-year/
-# 05.01.2025
+# 05.01.2026
 
 
 class Solution:

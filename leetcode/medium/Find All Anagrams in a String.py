@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/find-all-anagrams-in-a-string
-# 08.12.2025
+# 08.12.2026
 
 
 class Solution:

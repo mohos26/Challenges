@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/ugly-number
-# 27.11.2025
+# 27.11.2026
 
 
 import numpy as np

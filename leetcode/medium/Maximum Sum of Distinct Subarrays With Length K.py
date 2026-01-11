@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k
-# 04.01.2025
+# 04.01.2026
 
 
 class Solution:

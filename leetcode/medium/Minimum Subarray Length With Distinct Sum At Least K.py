@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/minimum-subarray-length-with-distinct-sum-at-least-k
-# 04.01.2025
+# 04.01.2026
 
 
 class Solution:

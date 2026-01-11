@@ -10,7 +10,7 @@ class Solution:
         return (lst[len(lst) // 2] + lst[len(lst) // 2 - 1]) / 2
 
 
-# 24.11.2025
+# 24.11.2026
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         length = len(nums1) + len(nums2)

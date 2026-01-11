@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/online-stock-span/
-# 14.12.2025
+# 14.12.2026
 
 
 class StockSpanner:

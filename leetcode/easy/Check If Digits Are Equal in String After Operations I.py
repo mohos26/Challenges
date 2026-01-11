@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i
-# 31.10.2025
+# 31.10.2026
 
 class Solution:
     def hasSameDigits(self, s: str) -> bool:

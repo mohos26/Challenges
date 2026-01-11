@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/
-# 15.10.2025
+# 15.10.2026
 
 
 class Solution:
@@ -12,7 +12,7 @@ class Solution:
         return -1
 
 
-# 01.12.2025
+# 01.12.2026
 class Solution_2:
     def findSpecialInteger(self, arr: List[int]) -> int:
         return max(Counter(arr).items(), key=lambda l:l[1])[0]

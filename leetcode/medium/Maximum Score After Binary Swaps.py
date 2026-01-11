@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/maximum-score-after-binary-swaps
-# 31.12.2025
+# 31.12.2026
 
 
 class Solution:

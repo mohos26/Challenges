@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/lru-cache
-# 30.11.2025
+# 30.11.2026
  
 
 class Double_linked_list:

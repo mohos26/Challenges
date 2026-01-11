@@ -1,4 +1,4 @@
-# 27.12.2025
+# 27.12.2026
 # https://leetcode.com/problems/longest-common-prefix
 
 

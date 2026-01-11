@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/validate-binary-search-tree
-# 15.12.2025
+# 15.12.2026
 
 
 class Solution:

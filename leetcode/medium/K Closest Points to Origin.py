@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/k-closest-points-to-origin/
-# 28.12.2025
+# 28.12.2026
 
 
 class Solution: # sort

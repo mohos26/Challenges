@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/serialize-and-deserialize-binary-tree
-# 23.12.2025
+# 23.12.2026
 
 
 class Codec:

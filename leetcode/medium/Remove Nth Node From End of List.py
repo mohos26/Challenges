@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/remove-nth-node-from-end-of-list
-# 28.11.2025
+# 28.11.2026
 
 
 class Solution:

@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/two-sum
-# 20.07.2025
-# 09.09.2025
+# 20.07.2026
+# 09.09.2026
 
 
 class Solution:

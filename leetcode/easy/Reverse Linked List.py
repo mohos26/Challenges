@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/reverse-linked-list
-# 30.10.2025
+# 30.10.2026
 
 
 class Solution:

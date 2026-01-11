@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/sliding-window-maximum
-# 01.11.2025
+# 01.11.2026
 
 
 class Solution_wrong: # Time out

@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/string-compression
-# 16.12.2025
+# 16.12.2026
 
 
 class Solution:

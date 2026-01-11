@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
-# 17.12.2025
+# 17.12.2026
 
 
 class Solution:

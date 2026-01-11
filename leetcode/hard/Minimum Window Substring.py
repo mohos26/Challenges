@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/minimum-window-substring
-# 19.10.2025
-# 31.10.2025
+# 19.10.2026
+# 31.10.2026
 
 
 class Solution_brute_force:
