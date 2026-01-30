@@ -39,3 +39,33 @@ class Solution:
                     heights[i][j] = float("inf")
         return res
 
+
+# 30.01.2026
+class Solution:
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+        M, N = len(heights), len(heights[0])
+
+        pacific_visited = set([(0, i) for i in range(N)] + [(i, 0) for i in range(M)])
+        atlantic_visited = set([(i, N-1) for i in range(M)] + [(M-1, i) for i in range(N)])
+
+        pacific_queue = deque(pacific_visited)
+        atlantic_queue = deque(atlantic_visited)
+
+        def bfs(queue, visited):
+            while queue:
+                i, j = queue.popleft()
+                for a, b in ((i, j + 1), (i, j - 1), (i + 1, j), (i - 1, j)):
+                    if (
+                        0 <= a < M
+                        and 0 <= b < N
+                        and heights[a][b] >= heights[i][j]
+                        and (a, b) not in visited
+                    ):
+                        visited.add((a, b))
+                        queue.append((a, b))
+
+        bfs(pacific_queue, pacific_visited)
+        bfs(atlantic_queue, atlantic_visited)
+
+        return list(pacific_visited & atlantic_visited)
+
