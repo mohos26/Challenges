@@ -177,3 +177,35 @@ class Solution: # trie + wildcard dfs + bfs multi source
 
         return 0
 
+
+class Solution: # hash table of wild card + bfs
+    def ft_aid(self, word):
+        res = []
+        for i in range(len(word)):
+            res.append(word[:i] + '*' + word[i+1:])
+        return res
+
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        if endWord not in wordList:
+            return 0
+        d = defaultdict(list)
+        for word in wordList:
+            for arg in self.ft_aid(word):
+                d[arg].append(word)
+        visited = defaultdict(bool)
+        visited[beginWord] = True
+        lst = deque([beginWord])
+        res = 1
+        while lst:
+            res += 1
+            for _ in range(len(lst)):
+                arg = lst.popleft()
+                for wild in self.ft_aid(arg):
+                    for word in d[wild]:
+                        if not visited[word]:
+                            if word == endWord:
+                                return res
+                            visited[word] = True
+                            lst.append(word)
+        return 0
+
