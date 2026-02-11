@@ -58,3 +58,20 @@ class Solution:
             res.append(nums[queue[0]])
         return res
 
+
+# 11.02.2026
+class Solution: # heap
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        res = []
+        heap = []
+        d = defaultdict(int)
+        for r in range(len(nums)):
+            heapq.heappush(heap, -nums[r])
+            d[nums[r]] += 1
+            if r + 1 >= k:
+                while d[-heap[0]] == 0:
+                    heapq.heappop(heap)
+                res.append(-heap[0])
+                d[nums[r-k+1]] -= 1
+        return res
+
