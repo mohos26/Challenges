@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/min-cost-climbing-stairs/
-# 02.03.2026
+# 01.03.2026
 
 
 class Solution:
