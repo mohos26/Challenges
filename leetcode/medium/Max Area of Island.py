@@ -48,3 +48,40 @@ class Solution:
 
         return res
 
+
+class DSU:
+    def __init__(self):
+        self.parent = {}
+
+    def find(self, target):
+        if target not in self.parent:
+            self.parent[target] = target
+        if target != self.parent[target]:
+            self.parent[target] = self.find(self.parent[target])
+        return self.parent[target]
+
+    def union(self, a, b):
+        ra = self.find(a)
+        rb = self.find(b)
+
+        self.parent[ra] = rb
+
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        dsu = DSU()
+        M, N = len(grid), len(grid[0])
+        for i in range(M):
+            for j in range(N):
+                if grid[i][j] == 0:
+                    continue
+                dsu.find((i, j))
+                for a, b in ((i, j+1), (i, j-1), (i+1, j), (i-1, j)):
+                    if 0 <= a < M and 0 <= b < N and grid[a][b] == 1:
+                        dsu.union((i, j), (a, b))
+        res = defaultdict(int)
+        for point in dsu.parent:
+            res[dsu.find(point)] += 1
+        if res:
+            return max(res.values())
+        return 0
+
