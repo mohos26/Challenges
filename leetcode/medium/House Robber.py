@@ -17,3 +17,15 @@ class Solution:
             dfs(1)
         return max(d.values())
 
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if len(nums) < 3:
+            return max(nums)
+        a, b, c = nums[-3:]
+        a += c
+        for n in nums[-4::-1]:
+            n += max(b, c)
+            a, b, c = n, a, b
+        return max(a, b, c)
+
