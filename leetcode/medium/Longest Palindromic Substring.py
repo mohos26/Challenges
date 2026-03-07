@@ -45,3 +45,19 @@ class Solution:
             res = max(res, self.ft_aid(s, i, i), self.ft_aid(s, i, i+1), key=len)
         return res
 
+
+class Solution:
+    def longestPalindrome(self, s):
+        res = ''
+        d = defaultdict(bool)
+        for length in range(1, len(s) + 1):
+            for i in range(len(s)):
+                j = i + length - 1
+                if j >= len(s):
+                    break
+                if s[i] == s[j] and (length <= 2 or d[(i+1, j-1)]):
+                    d[(i, j)] = True
+                    if length > len(res):
+                        res = s[i:j+1]
+        return res
+
