@@ -15,3 +15,15 @@ class Solution:
             return max(d.values()) + 1
         return 1
 
+
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        d = defaultdict(int)
+        lst = []
+        for n in nums[::-1]:
+            bisect.insort(lst, n)
+            d[n] = max(d[n], 1)
+            for nn in lst[bisect.bisect_right(lst, n):]:
+                d[n] = max(d[n], d[nn]+1)
+        return max(d.values())
+
