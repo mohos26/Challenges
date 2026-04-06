@@ -2,7 +2,7 @@
 # 09.09.2026
 
 
-class Solution:
+class Solution: # O(N K log K)
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         d = {}
         for s in strs:
@@ -12,10 +12,21 @@ class Solution:
 
 
 # 20.10.2026
-class Solution:
+class Solution: # O(N K log K)
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         d = defaultdict(list)
         for s in strs:
             d[tuple(sorted(s))].append(s)
+        return list(d.values())
+
+# 06.04.2026
+class Solution: # O(N . K)
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        d = defaultdict(list)
+        for s in strs:
+            lst = [0] * 26
+            for letter in s:
+                lst[ord(letter) - ord('a')] += 1
+            d[tuple(lst)].append(s)
         return list(d.values())
 
