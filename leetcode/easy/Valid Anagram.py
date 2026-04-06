@@ -17,3 +17,8 @@ class Solution2:
             d2[t[i]] = 1 + d2.get(t[i], 0)
         return d1 == d2
 
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
+
