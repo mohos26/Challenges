@@ -31,3 +31,17 @@ class Solution:
             res = max(res, curr)
         return res
 
+
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        res = 0
+        _set = set(nums)
+        for n in _set:
+            if n - 1 not in _set:
+                aid = 0
+                while n in _set:
+                    aid += 1
+                    n += 1
+                res = max(res, aid)
+        return res
+
