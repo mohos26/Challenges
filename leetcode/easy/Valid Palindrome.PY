@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/valid-palindrome/
-# 23.04.2026
+# 14.09.2025
 
 
 class Solution:
@@ -11,6 +11,7 @@ class Solution:
         return res == res[::-1]
 
 
+# 23.04.2026
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         s = ''.join(filter(str.isalnum, s)).lower()
