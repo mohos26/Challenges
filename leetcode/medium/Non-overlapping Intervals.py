@@ -30,3 +30,17 @@ class Solution_2:
                 end = intervals[i][1]
         return res
 
+
+# 05.06.2026
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        intervals.sort(key=lambda l: l[1])
+        last = intervals[0][1]
+        res = 0
+        for a, b in intervals[1:]:
+            if a < last:
+                res += 1
+                continue
+            last = b
+        return res
+
