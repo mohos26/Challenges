@@ -17,3 +17,17 @@ class Solution:
                 nums[i-1], nums[i] = nums[i], nums[i-1]
                 i -= 1
 
+
+# 16.07.2026
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        target, size = 2, len(nums)
+        for _ in range(2):
+            slow = 0
+            for fast in range(size):
+                if nums[fast] != target:
+                    if nums[slow] == target:
+                        nums[slow], nums[fast] = nums[fast], nums[slow]
+                    slow += 1
+            target, size = 1, slow
+
