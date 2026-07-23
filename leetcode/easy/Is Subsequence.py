@@ -33,3 +33,16 @@ class Solution:
                 else:
                     dp[i][j] = dp[i][j-1]
         return dp[-1][-1]
+
+
+# 23.07.2026
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        n, i = len(s), 0
+        for letter in t:
+            if i == n:
+                return True
+            if letter == s[i]:
+                i += 1
+        return i == n
+
