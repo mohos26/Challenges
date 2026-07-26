@@ -16,3 +16,17 @@ class Solution:
                 l += 1
         return res
 
+
+# 26.07.2026
+class Solution:
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        res = left = zeros = 0
+        for right in range(len(nums)):
+            zeros += nums[right] == 0
+            if zeros > k:
+                zeros -= nums[left] == 0
+                left += 1
+            else:
+                res = max(res, right - left + 1)
+        return res
+
