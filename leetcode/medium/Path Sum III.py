@@ -15,3 +15,23 @@ class Solution:
             return  res
         return dfs(root, 0)
 
+
+class Solution:
+    def pathSum(self, root: TreeNode | None, targetSum: int) -> int:
+        res = 0
+        memo = defaultdict(int)
+        memo[0] = 1
+        def dfs(node, total):
+            nonlocal res
+            if not node:
+                return
+            total += node.val
+            if memo[total - targetSum]:
+                res += memo[total - targetSum]
+            memo[total] += 1
+            dfs(node.left, total)
+            dfs(node.right, total)
+            memo[total] -= 1
+        dfs(root, 0)
+        return res
+
