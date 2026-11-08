@@ -16,6 +16,7 @@ class Solution:
         return dfs(root, 0)
 
 
+# 08.11.2026
 class Solution:
     def pathSum(self, root: TreeNode | None, targetSum: int) -> int:
         res = 0
