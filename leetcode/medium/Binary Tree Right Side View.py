@@ -19,3 +19,22 @@ class Solution:
         dfs(root, 0)
         return res
 
+
+# 12.11.2026
+class Solution:
+    def rightSideView(self, root: TreeNode | None) -> list[int]:
+        if not root:
+            return []
+        res = []
+        d = deque([root])
+        while d:
+            for _ in range(len(d)):
+                curr = d.popleft()
+                if curr.left:
+                    d.append(curr.left)
+                if curr.right:
+                    d.append(curr.right)
+            else:
+                res.append(curr.val)
+        return res
+
